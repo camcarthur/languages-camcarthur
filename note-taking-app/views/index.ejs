@@ -1,0 +1,12 @@
+<!-- views/index.ejs -->
+
+<h1>Welcome to NoteApp</h1>
+<p>Your personal space to jot down thoughts, ideas, and reminders.</p>
+<div class="cta-buttons">
+    <% if (!user) { %>
+        <a href="/register" class="btn">Get Started</a>
+        <a href="/login" class="btn">Login</a>
+    <% } else { %>
+        <a href="/notes" class="btn">View My Notes</a>
+    <% } %>
+</div>

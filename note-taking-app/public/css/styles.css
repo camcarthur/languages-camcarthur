@@ -1,0 +1,181 @@
+/* public/css/styles.css */
+
+/* Reset and Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    background-color: #f0f2f5;
+    color: #333;
+}
+
+/* Header Navigation */
+header {
+    background-color: #4a90e2;
+    padding: 1em 2em;
+}
+
+header nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header nav a {
+    color: #fff;
+    margin-right: 1em;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+header nav a:last-child {
+    margin-right: 0;
+}
+
+header nav a:hover {
+    text-decoration: underline;
+}
+
+/* Main Content */
+main {
+    max-width: 800px;
+    margin: 2em auto;
+    padding: 0 1em;
+}
+
+/* Headings */
+h1, h2 {
+    color: #333;
+    margin-bottom: 1em;
+}
+
+/* Forms */
+form {
+    background-color: #fff;
+    padding: 2em;
+    border-radius: 5px;
+    margin-bottom: 2em;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+form label {
+    display: block;
+    margin-bottom: 0.5em;
+    font-weight: bold;
+}
+
+form input[type="text"],
+form input[type="password"],
+form textarea {
+    width: 100%;
+    padding: 0.75em;
+    margin-bottom: 1em;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+form button {
+    padding: 0.75em 1.5em;
+    background-color: #4a90e2;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+form button:hover {
+    background-color: #357ab8;
+}
+
+/* Messages */
+.success, .error {
+    padding: 1em;
+    margin-bottom: 1em;
+    border-radius: 5px;
+}
+
+.success {
+    background-color: #d4edda;
+    color: #155724;
+    border: 1px solid #c3e6cb;
+}
+
+.error {
+    background-color: #f8d7da;
+    color: #721c24;
+    border: 1px solid #f5c6cb;
+}
+
+/* Notes List */
+.notes-list {
+    list-style-type: none;
+    padding: 0;
+}
+
+.notes-list li {
+    background-color: #fff;
+    padding: 1.5em;
+    margin-bottom: 1em;
+    border-radius: 5px;
+    position: relative;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.notes-list li p {
+    margin-bottom: 0.5em;
+    white-space: pre-wrap;
+}
+
+.notes-list li small {
+    color: #666;
+}
+
+.notes-list li .note-actions {
+    position: absolute;
+    top: 1em;
+    right: 1em;
+}
+
+.notes-list li .note-actions button {
+    background-color: transparent;
+    border: none;
+    color: #888;
+    cursor: pointer;
+    font-size: 1em;
+}
+
+.notes-list li .note-actions button:hover {
+    color: #333;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 2em;
+    background-color: #f0f2f5;
+    color: #888;
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+    header nav {
+        flex-direction: column;
+    }
+
+    header nav a {
+        margin-bottom: 0.5em;
+    }
+
+    form, .notes-list li {
+        padding: 1em;
+    }
+
+    .notes-list li .note-actions {
+        top: 0.5em;
+        right: 0.5em;
+    }
+}

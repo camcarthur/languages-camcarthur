@@ -1,0 +1,29 @@
+<!-- views/notes.ejs -->
+
+<h2>My Notes</h2>
+
+<form action="/notes/add" method="POST">
+    <label for="content">New Note:</label>
+    <textarea name="content" id="content" placeholder="Write your note here..." required></textarea>
+    <button type="submit">Add Note</button>
+</form>
+
+<ul class="notes-list">
+    <% if (notes.length === 0) { %>
+        <li>
+            <p>You have no notes yet. Start adding some!</p>
+        </li>
+    <% } else { %>
+        <% notes.forEach(note => { %>
+            <li>
+                <p><%= note.content %></p>
+                <small><%= new Date(note.created_at).toLocaleString() %></small>
+                <div class="note-actions">
+                    <form action="/notes/delete/<%= note.id %>" method="POST" class="delete-note-form">
+                        <button type="submit">&#x2716;</button>
+                    </form>
+                </div>
+            </li>
+        <% }) %>
+    <% } %>
+</ul>
