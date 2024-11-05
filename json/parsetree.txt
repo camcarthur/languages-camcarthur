@@ -1,0 +1,43 @@
+{"x":[1,2],"y":{"size":33,"use":true}}
+
+JSON
+|-- object
+    |-- '{'
+    |-- members
+        |-- member
+            |-- value 
+                |-- string: "x"
+            |-- ':'
+            |-- array
+                |-- '['
+                |-- elements
+                    |-- value
+                        |-- number: 1
+                    |-- ','
+                    |-- value 
+                        |-- number: 2
+                |-- ']'
+        |-- ','
+            |-- member
+                |-- value 
+                    |-- string: "y"
+                |-- ':'
+                |-- value
+                    |-- object
+                        |-- '{'
+                        |-- members
+                            |-- member
+                                |-- value
+                                    |-- string: "size"
+                                |-- ':'
+                                |-- value
+                                    |-- number: 33
+                            |-- ','
+                            |-- member
+                                |-- value
+                                    |-- string: "use"
+                                |-- ':'
+                                |-- value
+                                    |-- true
+                        |-- '}'
+    |-- '}'    
